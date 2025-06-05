@@ -1,8 +1,8 @@
-import { Repository } from 'typeorm';
-import { TeamPokemon } from './entities/team-pokemon.entity';
-import { Team } from '../team/entities/team.entity';
-import { CreateTeamPokemonDto } from './dto/create-team-pokemon.dto';
-import { PokeapiService } from '../pokeapi/pokeapi.service';
+import { Repository } from "typeorm";
+import { TeamPokemon } from "./entities/team-pokemon.entity";
+import { Team } from "../team/entities/team.entity";
+import { CreateTeamPokemonDto } from "./dto/create-team-pokemon.dto";
+import { PokeapiService } from "../pokeapi/pokeapi.service";
 export declare class TeamPokemonService {
     private teamPokemonRepository;
     private teamRepository;

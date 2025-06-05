@@ -1,7 +1,7 @@
-import { Test, TestingModule } from '@nestjs/testing';
-import { PokeapiService } from './pokeapi.service';
+import { Test, TestingModule } from "@nestjs/testing";
+import { PokeapiService } from "./pokeapi.service";
 
-describe('PokeapiService', () => {
+describe("PokeapiService", () => {
   let service: PokeapiService;
 
   beforeEach(async () => {
@@ -12,7 +12,7 @@ describe('PokeapiService', () => {
     service = module.get<PokeapiService>(PokeapiService);
   });
 
-  it('should be defined', () => {
+  it("should be defined", () => {
     expect(service).toBeDefined();
   });
 });

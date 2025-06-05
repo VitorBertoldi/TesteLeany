@@ -1,5 +1,5 @@
-import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from 'typeorm';
-import { Team } from '../../team/entities/team.entity';
+import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
+import { Team } from "../../team/entities/team.entity";
 
 @Entity()
 export class Trainer {

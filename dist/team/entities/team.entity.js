@@ -29,7 +29,7 @@ __decorate([
     __metadata("design:type", String)
 ], Team.prototype, "name", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => trainer_entity_1.Trainer, (trainer) => trainer.teams, { onDelete: 'CASCADE' }),
+    (0, typeorm_1.ManyToOne)(() => trainer_entity_1.Trainer, (trainer) => trainer.teams, { onDelete: "CASCADE" }),
     __metadata("design:type", trainer_entity_1.Trainer)
 ], Team.prototype, "trainer", void 0);
 __decorate([

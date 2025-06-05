@@ -31,12 +31,12 @@ let TeamPokemonService = class TeamPokemonService {
     async addPokemon(teamId, dto) {
         const team = await this.teamRepository.findOne({ where: { id: teamId } });
         if (!team)
-            throw new common_1.NotFoundException('Team not found');
+            throw new common_1.NotFoundException("Team not found");
         const pokemonsInTeam = await this.teamPokemonRepository.find({
             where: { team: { id: teamId } },
         });
         if (pokemonsInTeam.length >= 6) {
-            throw new common_1.BadRequestException('A team can have at most 6 Pokémons');
+            throw new common_1.BadRequestException("A team can have at most 6 Pokémons");
         }
         await this.pokeapiService.getPokemonInfo(dto.pokemonIdentifier);
         const teamPokemon = this.teamPokemonRepository.create({
@@ -50,13 +50,13 @@ let TeamPokemonService = class TeamPokemonService {
             where: { id },
         });
         if (!pokemon)
-            throw new common_1.NotFoundException('Team Pokémon not found');
+            throw new common_1.NotFoundException("Team Pokémon not found");
         return this.teamPokemonRepository.remove(pokemon);
     }
     async listTeamPokemons(teamId) {
         const team = await this.teamRepository.findOne({ where: { id: teamId } });
         if (!team)
-            throw new common_1.NotFoundException('Team not found');
+            throw new common_1.NotFoundException("Team not found");
         const pokemons = await this.teamPokemonRepository.find({
             where: { team: { id: teamId } },
         });

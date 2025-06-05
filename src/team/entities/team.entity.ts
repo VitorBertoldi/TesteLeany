@@ -4,9 +4,9 @@ import {
   Column,
   ManyToOne,
   OneToMany,
-} from 'typeorm';
-import { Trainer } from '../../trainer/entities/trainer.entity';
-import { TeamPokemon } from '../../team-pokemon/entities/team-pokemon.entity';
+} from "typeorm";
+import { Trainer } from "../../trainer/entities/trainer.entity";
+import { TeamPokemon } from "../../team-pokemon/entities/team-pokemon.entity";
 
 @Entity()
 export class Team {
@@ -16,7 +16,7 @@ export class Team {
   @Column()
   name: string;
 
-  @ManyToOne(() => Trainer, (trainer) => trainer.teams, { onDelete: 'CASCADE' })
+  @ManyToOne(() => Trainer, (trainer) => trainer.teams, { onDelete: "CASCADE" })
   trainer: Trainer;
 
   @OneToMany(() => TeamPokemon, (teamPokemon) => teamPokemon.team)

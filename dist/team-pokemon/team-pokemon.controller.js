@@ -35,29 +35,29 @@ let TeamPokemonController = class TeamPokemonController {
 exports.TeamPokemonController = TeamPokemonController;
 __decorate([
     (0, common_1.Post)(),
-    __param(0, (0, common_1.Param)('teamId')),
+    __param(0, (0, common_1.Param)("teamId")),
     __param(1, (0, common_1.Body)()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String, create_team_pokemon_dto_1.CreateTeamPokemonDto]),
     __metadata("design:returntype", void 0)
 ], TeamPokemonController.prototype, "add", null);
 __decorate([
-    (0, common_1.Delete)(':id'),
-    __param(0, (0, common_1.Param)('id')),
+    (0, common_1.Delete)(":id"),
+    __param(0, (0, common_1.Param)("id")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], TeamPokemonController.prototype, "remove", null);
 __decorate([
     (0, common_1.Get)(),
-    __param(0, (0, common_1.Param)('teamId')),
+    __param(0, (0, common_1.Param)("teamId")),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [String]),
     __metadata("design:returntype", void 0)
 ], TeamPokemonController.prototype, "list", null);
 exports.TeamPokemonController = TeamPokemonController = __decorate([
-    (0, swagger_1.ApiTags)('team-pokemons'),
-    (0, common_1.Controller)('teams/:teamId/pokemons'),
+    (0, swagger_1.ApiTags)("team-pokemons"),
+    (0, common_1.Controller)("teams/:teamId/pokemons"),
     __metadata("design:paramtypes", [team_pokemon_service_1.TeamPokemonService])
 ], TeamPokemonController);
 //# sourceMappingURL=team-pokemon.controller.js.map

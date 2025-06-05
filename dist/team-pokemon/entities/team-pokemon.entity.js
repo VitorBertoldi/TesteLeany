@@ -27,7 +27,7 @@ __decorate([
     __metadata("design:type", String)
 ], TeamPokemon.prototype, "pokemonIdentifier", void 0);
 __decorate([
-    (0, typeorm_1.ManyToOne)(() => team_entity_1.Team, (team) => team.pokemons, { onDelete: 'CASCADE' }),
+    (0, typeorm_1.ManyToOne)(() => team_entity_1.Team, (team) => team.pokemons, { onDelete: "CASCADE" }),
     __metadata("design:type", team_entity_1.Team)
 ], TeamPokemon.prototype, "team", void 0);
 exports.TeamPokemon = TeamPokemon = __decorate([

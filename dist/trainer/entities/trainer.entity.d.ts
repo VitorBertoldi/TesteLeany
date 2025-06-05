@@ -1,4 +1,4 @@
-import { Team } from '../../team/entities/team.entity';
+import { Team } from "../../team/entities/team.entity";
 export declare class Trainer {
     id: number;
     name: string;

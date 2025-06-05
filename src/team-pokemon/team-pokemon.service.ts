@@ -2,13 +2,13 @@ import {
   Injectable,
   NotFoundException,
   BadRequestException,
-} from '@nestjs/common';
-import { InjectRepository } from '@nestjs/typeorm';
-import { Repository } from 'typeorm';
-import { TeamPokemon } from './entities/team-pokemon.entity';
-import { Team } from '../team/entities/team.entity';
-import { CreateTeamPokemonDto } from './dto/create-team-pokemon.dto';
-import { PokeapiService } from '../pokeapi/pokeapi.service';
+} from "@nestjs/common";
+import { InjectRepository } from "@nestjs/typeorm";
+import { Repository } from "typeorm";
+import { TeamPokemon } from "./entities/team-pokemon.entity";
+import { Team } from "../team/entities/team.entity";
+import { CreateTeamPokemonDto } from "./dto/create-team-pokemon.dto";
+import { PokeapiService } from "../pokeapi/pokeapi.service";
 
 @Injectable()
 export class TeamPokemonService {
@@ -22,13 +22,13 @@ export class TeamPokemonService {
 
   async addPokemon(teamId: number, dto: CreateTeamPokemonDto) {
     const team = await this.teamRepository.findOne({ where: { id: teamId } });
-    if (!team) throw new NotFoundException('Team not found');
+    if (!team) throw new NotFoundException("Team not found");
 
     const pokemonsInTeam = await this.teamPokemonRepository.find({
       where: { team: { id: teamId } },
     });
     if (pokemonsInTeam.length >= 6) {
-      throw new BadRequestException('A team can have at most 6 Pokémons');
+      throw new BadRequestException("A team can have at most 6 Pokémons");
     }
 
     await this.pokeapiService.getPokemonInfo(dto.pokemonIdentifier);
@@ -45,13 +45,13 @@ export class TeamPokemonService {
     const pokemon = await this.teamPokemonRepository.findOne({
       where: { id },
     });
-    if (!pokemon) throw new NotFoundException('Team Pokémon not found');
+    if (!pokemon) throw new NotFoundException("Team Pokémon not found");
     return this.teamPokemonRepository.remove(pokemon);
   }
 
   async listTeamPokemons(teamId: number) {
     const team = await this.teamRepository.findOne({ where: { id: teamId } });
-    if (!team) throw new NotFoundException('Team not found');
+    if (!team) throw new NotFoundException("Team not found");
 
     const pokemons = await this.teamPokemonRepository.find({
       where: { team: { id: teamId } },

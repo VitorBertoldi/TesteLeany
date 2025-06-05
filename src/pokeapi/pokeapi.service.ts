@@ -1,5 +1,5 @@
-import { Injectable, NotFoundException } from '@nestjs/common';
-import axios from 'axios';
+import { Injectable, NotFoundException } from "@nestjs/common";
+import axios from "axios";
 
 interface PokeApiResponse {
   name: string;

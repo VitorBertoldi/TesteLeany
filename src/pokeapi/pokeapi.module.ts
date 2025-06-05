@@ -1,5 +1,5 @@
-import { Module } from '@nestjs/common';
-import { PokeapiService } from './pokeapi.service';
+import { Module } from "@nestjs/common";
+import { PokeapiService } from "./pokeapi.service";
 
 @Module({
   providers: [PokeapiService],

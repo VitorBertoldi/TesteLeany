@@ -1,5 +1,5 @@
-import { TeamPokemonService } from './team-pokemon.service';
-import { CreateTeamPokemonDto } from './dto/create-team-pokemon.dto';
+import { TeamPokemonService } from "./team-pokemon.service";
+import { CreateTeamPokemonDto } from "./dto/create-team-pokemon.dto";
 export declare class TeamPokemonController {
     private readonly service;
     constructor(service: TeamPokemonService);
