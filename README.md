@@ -1,5 +1,5 @@
 
-# 🧠 Pokémon Trainer API
+# Pokémon Trainer API
 
 Desafio técnico da Leany – Desenvolvedor Backend Júnior
 
@@ -7,18 +7,18 @@ Esta API RESTful permite gerenciar **treinadores**, **times de Pokémon** e adic
 
 ---
 
-## 🚀 Tecnologias
+## Tecnologias
 
-- ✅ NestJS (TypeScript)
-- ✅ TypeORM (MySQL)
-- ✅ PokéAPI (https://pokeapi.co)
-- ✅ Swagger (documentação)
-- ✅ Docker + Docker Compose
-- ✅ Testes e2e com Jest + Supertest
+-  NestJS (TypeScript)
+-  TypeORM (MySQL)
+-  PokéAPI (https://pokeapi.co)
+-  Swagger (documentação)
+-  Docker + Docker Compose
+-  Testes e2e com Jest + Supertest
 
 ---
 
-## 🧪 Como rodar localmente
+## Como rodar localmente
 
 ### Pré-requisitos
 
@@ -71,7 +71,7 @@ Você poderá testar endpoints como:
 
 ---
 
-## ✅ Testes automatizados
+## Testes automatizados
 
 O projeto possui **testes end-to-end (e2e)** para:
 
@@ -87,28 +87,13 @@ npm run test:e2e
 
 ---
 
-## 🧠 Decisões de Projeto
+## Decisões de Projeto
 
 - **Arquitetura em camadas:** separação clara entre controller, service, DTO, entity.
 - **Integração isolada com PokéAPI:** via `PokeapiService`.
 - **Validação de DTOs:** com `class-validator`.
 - **Limite de 6 Pokémons por time:** implementado com validação.
 - **Swagger habilitado para facilitar o uso.**
-
----
-
-## 💡 Possíveis melhorias
-
-- Cache em memória para chamadas repetidas à PokéAPI
-- Testes unitários com mocks de serviços
-- Paginação de listagens
-- Autenticação com JWT
-
----
-
-## 📽️ Vídeo explicativo (opcional)
-
-👉 Assista no Loom: [COLE O LINK AQUI]
 
 ---
 
